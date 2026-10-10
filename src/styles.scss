@@ -22,6 +22,15 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  font-family: var(--font-family-base);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-family-title);
 }
 
 /* Elementos de mídia */
@@ -39,8 +48,21 @@ input,
 button,
 textarea,
 select {
-  font: inherit;
+  font: var(--font-family-base);
 }
+
+/* Texto */
+p,
+span,
+sub,
+sup,
+time,
+address,
+q,
+blockquote {
+  font: var(--font-family-base)
+}
+
 
 /* Links */
 a {
@@ -98,6 +120,10 @@ a {
   /* Acessibilidade */
   --focus-outline: 2px solid var(--color-gold);
   --focus-outline-offset: 2px;
+
+  /* Fonte */
+  --font-family-base: 'Inter', sans-serif;
+  --font-family-title: 'Lora', serif;
 }
 
 
