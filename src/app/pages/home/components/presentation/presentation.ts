@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PdButton } from '../../../shared/pd-button/pd-button';
+import { PdButton } from '../../../../shared/pd-button/pd-button';
 
 @Component({
   imports: [PdButton],
