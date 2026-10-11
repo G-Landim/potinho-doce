@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
+import { PdButton } from '../../../shared/pd-button/pd-button';
 
 @Component({
-  imports: [],
+  imports: [PdButton],
   selector: 'app-header',
   styleUrl: './header.scss',
   templateUrl: './header.html',

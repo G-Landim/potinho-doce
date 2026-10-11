@@ -6,7 +6,7 @@ export type IButtonTypes = 'primary' | 'secondary' | 'terciary';
 
 @Component({
   imports: [NgClass],
-  selector: 'app-pd-button',
+  selector: 'pd-button',
   styleUrl: './pd-button.scss',
   templateUrl: './pd-button.html',
 })
