@@ -1,0 +1,40 @@
+.presentation{
+    display: flex;
+    width: 920px;
+    align-items: center;
+    gap: 120px;
+    .main-text{
+        display: flex;
+        width: 520px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+        flex-shrink: 0;
+    }
+    .title{
+        font-size: 42px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 140%;
+    }
+    .sub-text{
+        color: var(--color-muted);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%; /* 22.4px */
+    }
+    .pd-buttons{
+        display: flex;
+        width: 520px;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    .icon{
+        display: flex;
+        width: 280px;
+        flex-direction: column;
+        align-items: center;
+        flex-shrink: 0;
+    }
+}
