@@ -1,14 +1,15 @@
-@use "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap');
 
 
 /* Reset básico */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 /* Configuração da página */
@@ -34,14 +35,14 @@ h3 {
 }
 
 /* Elementos de mídia */
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-}
+// img,
+// picture,
+// video,
+// canvas,
+// svg {
+//   display: block;
+//   max-width: 100%;
+// }
 
 /* Formulários */
 input,
@@ -49,6 +50,10 @@ button,
 textarea,
 select {
   font: var(--font-family-base);
+}
+
+button{
+  cursor: pointer
 }
 
 /* Texto */
