@@ -1,5 +1,23 @@
+@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap');
+@theme {
+  /* 1. Criando uma cor customizada a partir de um valor estático */
+  --color-bg: #FBF3E9;
+  --color-surface: #FFFDFA;
+  --color-brown: #4B2C29;
+  --color-pink: #D6A49C;
+  --color-gold: #C9A521;
+  --color-border: #E8DED2;
+  --color-green: #E2EFDF;
+  --color-warning: #F8E6CA;
+  --color-muted: #76625A;
 
+  /* 2. Mapeando uma variável CSS nativa já existente no seu projeto */
+  --color-custom-bg: var(--minha-cor-de-fundo-nativa);
+
+  /* 3. Criando um espaçamento customizado */
+  --spacing-huge: 3.5rem;
+}
 
 /* Reset básico */
 @layer base {
@@ -65,7 +83,7 @@ time,
 address,
 q,
 blockquote {
-  font: var(--font-family-base)
+  font-family: var(--font-family-base)
 }
 
 
@@ -89,9 +107,8 @@ a {
   --color-border: #E8DED2;
   --color-green: #E2EFDF;
   --color-warning: #F8E6CA;
-  --color-pink: #D6A49C;
   --color-muted: #76625A;
-
+  --color-cream: #F2E8D8;
   /* Aplicação semântica das cores */
   --color-primary: var(--color-brown);
   --color-secondary: var(--color-pink);
