@@ -8,6 +8,7 @@
     border-radius: 14px;
     border: 1px solid var(--color-border);
     background: var(--color-surface);
+    transition: transform 0.3s ease;
 
     .picture{
       width: 100%;
@@ -45,4 +46,7 @@
         line-height: 140%;
      }
     }
+}
+.content-card:hover{
+  transform: scale(1.1);
 }

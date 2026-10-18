@@ -1,18 +1,63 @@
 .baseboard{
     display: flex;
-    width: 1440px;
+    width: 100%;
     padding: 40px 260px;
     align-items: flex-start;
+    justify-content: center;
     gap: 40px;
     background: var(--color-brown);
 
     .description{
+        display: flex;
+        width: 280px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        flex-shrink: 0;
 
+        h2{
+            color: var(--color-surface);
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 140%; /* 28px */
+        }
+        p{
+         color: var(--color-surface);
+         font-size: 12px;
+         font-style: normal;
+         font-weight: 400;
+         line-height: 140%; /* 16.8px */
+        }
     }
     .contact{
+        display: flex;
+        width: 280px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        flex-shrink: 0;
 
+        p{
+         font-size: 12px;
+         font-style: normal;
+         font-weight: 400;
+         line-height: 140%;
+        }
     }
     .operation-hours{
+        display: flex;
+        width: 280px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        flex-shrink: 0;
 
+        p{
+         font-size: 12px;
+         font-style: normal;
+         font-weight: 400;
+         line-height: 140%;
+        }
     }
 }
