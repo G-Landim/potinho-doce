@@ -4,6 +4,7 @@ import { Presentation } from './components/presentation/presentation';
 import { HowToOrder } from './components/how-to-order/how-to-order';
 import { DisplayWindow } from './components/display-window/display-window';
 import { Baseboard } from './components/baseboard/baseboard';
+import { ApiService } from '../../services/api';
 
 @Component({
   imports: [Header, Presentation, HowToOrder, DisplayWindow, Baseboard],
@@ -11,4 +12,16 @@ import { Baseboard } from './components/baseboard/baseboard';
   styleUrl: './home.scss',
   templateUrl: './home.html',
 })
-export class Home {}
+export class Home {
+
+  constructor(private api: ApiService){}
+
+  async testarApi(){
+    try {
+      const csrf = await this.api.buscarCsrf()
+      console.log('CSRF Recebido:', csrf);
+    } catch(erro){
+      console.error('Falha ao consultar API: "erro)
+    }
+  }
+}
