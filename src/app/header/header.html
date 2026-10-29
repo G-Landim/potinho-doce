@@ -7,11 +7,12 @@
         </div>
     </div>
     <div class="navigation">
-        <button type="button">Início</button>
-        <button type="button">Sabores</button>
-        <button type="button">Como encomendar</button>
+        <a routerLink="/home">Início</a>
+        <a routerLink="/home">Sabores</a>
+        <a routerLink="/home">Como encomendar</a>
     </div>
     <div class="order">
-        <pd-button [title]="'Fazer Encomenda'"/>
+       <a routerLink="/new-order"><pd-button [title]="'Fazer Encomenda'"/></a>
     </div>
 </div>
+<div class="divisor"></div>

@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import { PdButton } from '../../../../shared/components/pd-button/pd-button';
+import { PdButton } from '../shared/components/pd-button/pd-button';
+import { RouterLink } from '@angular/router';
 
 @Component({
-  imports: [PdButton],
+  imports: [PdButton, RouterLink],
   selector: 'app-header',
   styleUrl: './header.scss',
   templateUrl: './header.html',
