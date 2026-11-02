@@ -1,1 +1,66 @@
-<p>new-order works!</p>
+<div class="new-order">
+    <div class="container-head">
+        <p>ENCOMENDAS</p>
+        <h1 class="font-bold text-[30px]">Monte seu pedido</h1>
+        <p>Preencha os dados, escolha os sabores e envie direto para o nosso Whatsapp.</p>
+    </div>
+    <div class="container">
+        <div class="container-form">
+            <form class="flex flex-col gap-[22px]">
+                <div class="container-grid">
+                    <div class="flex flex-col gap-8">
+                        <label for="name">Nome completo</label>
+                        <input id="name" type="text" placeholder="Seu nome">
+                    </div>
+                    <div class="flex flex-col gap-8">
+                        <label for="phone">WhatsApp</label>
+                        <input id="phone" type="tel" inputmode="tel" placeholder="(99) 9999-9999">
+                    </div>
+                    <div class="flex flex-col gap-8">
+                        <label for="date">Data</label>
+                        <input id="date" type="date">
+                    </div>
+                    <div class="flex flex-col gap-8">
+                        <label for="name">Horário</label>
+                        <input id="name" type="datetime" placeholder="--:--">
+                    </div> 
+                </div>
+
+                <div class="order-type">
+                    <p>Tipo de pedido</p>
+                    <div class="flex gap-[8px]">
+                        <pd-button [buttonTypes]="'primary'" [title]="'Entrega'"/>
+                        <pd-button [buttonTypes]="'secondary'" [title]="'Retirada'"/>
+                    </div>
+                    <p>Entrega adiciona taxa fixa de R$5,00</p>
+                </div>
+
+                <div class="country">
+                    <div class="flex flex-col gap-8">
+                        <label for="country">Endereço</label>
+                        <input id="country" type="text" placeholder="Rua e avenida">
+                    </div>
+
+                    <div class="flex gap-[16px] ">
+                        <div class="flex flex-col gap-8">
+                            <label for="number">Número</label>
+                            <input class="teste" id="number" type="number" placeholder="Número">
+                        </div>
+                        <div class="flex flex-col gap-8">
+                            <label for="complement">Complemento</label>
+                            <input id="complement" type="text" placeholder="opcional">
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-8">
+                        <label for="district">Bairro</label>
+                        <input id="district" type="text" placeholder="Bairro">
+                    </div>
+                    <div class="flex flex-col gap-8">
+                        <label for="postal-code">CEP</label>
+                        <input id="postal-code" type="number" placeholder="0000-000">
+                    </div> 
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
