@@ -6,23 +6,23 @@
     </div>
     <div class="container">
         
-            <form class="flex flex-col gap-[22px] container-form" [formGroup]="form">
+            <form class="flex flex-col gap-[22px] container-form" [formGroup]="form" (ngSubmit)="onSubmit()">
                 <div class="container-grid">
                     <div class="flex flex-col gap-[8px]">
                         <label for="name">Nome completo</label>
-                        <input id="name" type="text" placeholder="Seu nome">
+                        <input id="name" type="text" placeholder="Seu nome" formControlName="name">
                     </div>
                     <div class="flex flex-col gap-[8px]">
                         <label for="phone">WhatsApp</label>
-                        <input id="phone" type="tel" inputmode="tel" placeholder="(99) 9999-9999">
+                        <input id="phone" type="text" inputmode="numeric" placeholder="(99) 9999-9999" formControlName="phone" maxlength="10" appPhoneMask>
                     </div>
                     <div class="flex flex-col gap-[8px]">
                         <label for="date">Data</label>
-                        <input id="date" type="date">
+                        <input id="date" type="date" formControlName="date"> 
                     </div>
                     <div class="flex flex-col gap-[8px]">
                         <label for="name">Horário <span class="text-[8px] text-gold">Opcional</span></label>
-                        <input id="name" type="datetime" placeholder="--:--">
+                        <input id="name" type="datetime" placeholder="--:--" formControlName="time">
                     </div> 
                 </div>
 
@@ -64,6 +64,6 @@
                     </div>
                 }
             </form>
-        <app-order-summary></app-order-summary>
+        <app-order-summary (submit)="onSubmit()"></app-order-summary>
     </div>
 </div>
