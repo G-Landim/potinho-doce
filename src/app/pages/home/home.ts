@@ -21,7 +21,7 @@ export class Home {
       const csrf = await this.api.buscarCsrf()
       console.log('CSRF Recebido:', csrf);
     } catch(erro){
-      console.error('Falha ao consultar API: "erro)
+      console.error('Falha ao consultar API: ' + erro)
     }
   }
 }
