@@ -4,7 +4,7 @@ import { Presentation } from './components/presentation/presentation';
 import { HowToOrder } from './components/how-to-order/how-to-order';
 import { DisplayWindow } from './components/display-window/display-window';
 import { Baseboard } from './components/baseboard/baseboard';
-import { ApiService } from '../../services/api';
+import { ApiService } from '../../core/csrf.service';
 
 @Component({
   imports: [Header, Presentation, HowToOrder, DisplayWindow, Baseboard],
