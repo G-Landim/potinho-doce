@@ -5,7 +5,7 @@ import { Header } from './header/header';
 import { Baseboard } from './baseboard/baseboard';
 
 @Component({
-  imports: [RouterOutlet, Home, Header, Baseboard],
+  imports: [RouterOutlet, Header, Baseboard],
   selector: 'app-root',
   styleUrl: './app.scss',
   templateUrl: './app.html',
