@@ -1,1 +1,69 @@
-<p>new-order works!</p>
+<div class="new-order">
+    <div class="container-head">
+        <p>ENCOMENDAS</p>
+        <h1 class="font-bold text-[30px]">Monte seu pedido</h1>
+        <p>Preencha os dados, escolha os sabores e envie direto para o nosso Whatsapp.</p>
+    </div>
+    <div class="container">
+        
+            <form class="flex flex-col gap-[22px] container-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+                <div class="container-grid">
+                    <div class="flex flex-col gap-[8px]">
+                        <label for="name">Nome completo</label>
+                        <input id="name" type="text" placeholder="Seu nome" formControlName="name">
+                    </div>
+                    <div class="flex flex-col gap-[8px]">
+                        <label for="phone">WhatsApp</label>
+                        <input id="phone" type="text" inputmode="numeric" placeholder="(99) 9999-9999" formControlName="phone" maxlength="10" appPhoneMask>
+                    </div>
+                    <div class="flex flex-col gap-[8px]">
+                        <label for="date">Data</label>
+                        <input id="date" type="date" formControlName="date"> 
+                    </div>
+                    <div class="flex flex-col gap-[8px]">
+                        <label for="name">Horário <span class="text-[8px] text-gold">Opcional</span></label>
+                        <input id="name" type="datetime" placeholder="--:--" formControlName="time">
+                    </div> 
+                </div>
+
+                <div class="order-type">
+                    <p>Tipo de pedido</p>
+                    <div class="flex gap-[8px]">
+                        <pd-button [buttonTypes]="'primary'" [title]="'Entrega'" (click)="form.controls.orderType.setValue('delivery')"/>
+                        <pd-button [buttonTypes]="'secondary'" [title]="'Retirada'" (click)="form.controls.orderType.setValue('receive')"/>
+                    </div>
+                    <p>Entrega adiciona taxa fixa de R$5,00</p>
+                </div>
+                @if(form.get('orderType')?.value === 'delivery'){
+                    <div class="country">
+                        <div class="flex flex-col gap-[8px]">
+                            <label for="country">Endereço</label>
+                            <input id="country" type="text" placeholder="Rua e avenida">
+                        </div>
+
+                        <div class="flex gap-[16px] ">
+                            <div class="flex flex-col gap-[8px]">
+                                <label for="number">Número</label>
+                                <input class="w-[160px]" id="number" type="number" placeholder="Número">
+                            </div>
+                            <div class="flex flex-col gap-[8px]">
+                                <label for="complement">Complemento</label>
+                                <input class="w-[426px]" id="complement" type="text" placeholder="opcional">
+                            </div>
+                        </div>
+                        <div class="flex gap-[16px] ">
+                            <div class="flex flex-col gap-[8px]">
+                                <label for="district">Bairro</label>
+                                <input class="w-[350px]" id="district" type="text" placeholder="Bairro">
+                            </div>
+                            <div class="flex flex-col gap-[8px]">
+                                <label for="postal-code">CEP</label>
+                                <input class="w-[236px]" id="postal-code" type="number" placeholder="0000-000">
+                            </div> 
+                        </div>
+                    </div>
+                }
+            </form>
+        <app-order-summary (submit)="onSubmit()"></app-order-summary>
+    </div>
+</div>

@@ -14,6 +14,7 @@ export type IButtonTypes = 'primary' | 'secondary' | 'terciary';
 export class PdButton {
 
   @Input() title?: string;
-
   @Input() buttonTypes: IButtonTypes = 'primary';
+  @Input() sizeText?: number;
+  @Input() size?: number;
 }
